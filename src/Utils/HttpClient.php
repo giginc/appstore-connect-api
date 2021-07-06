@@ -1,6 +1,6 @@
 <?php
 
-namespace MingYuanYun\AppStore\Utils;
+namespace Giginc\AppStore\Utils;
 
 
 use Curl\Curl;

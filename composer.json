@@ -1,12 +1,12 @@
 {
-    "name": "yunchuang/appstore-connect-api",
+    "name": "giginc/appstore-connect-api",
     "description": "sdk for appstore connect api",
     "type": "library",
     "license": "MIT",
     "authors": [
         {
-            "name": "zengbin",
-            "email": "zengb02@mingyuanyun.com"
+            "name": "kgws",
+            "email": "kagawa@giginc.co.jp"
         }
     ],
     "minimum-stability": "stable",
@@ -16,7 +16,7 @@
     },
     "autoload": {
         "psr-4": {
-            "MingYuanYun\\AppStore\\": "src/"
+            "Giginc\\AppStore\\": "src/"
         }
     }
 }

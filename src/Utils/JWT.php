@@ -1,10 +1,9 @@
 <?php
 
+namespace Giginc\AppStore\Utils;
 
-namespace MingYuanYun\AppStore\Utils;
 
-
-use MingYuanYun\AppStore\Exceptions\RuntimeException;
+use Giginc\AppStore\Exceptions\RuntimeException;
 
 class JWT
 {

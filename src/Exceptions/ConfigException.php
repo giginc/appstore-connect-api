@@ -1,6 +1,6 @@
 <?php
 
-namespace MingYuanYun\AppStore\Exceptions;
+namespace Giginc\AppStore\Exceptions;
 
 
 class ConfigException extends Exception

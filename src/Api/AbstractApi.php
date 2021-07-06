@@ -1,9 +1,8 @@
 <?php
 
+namespace Giginc\AppStore\Api;
 
-namespace MingYuanYun\AppStore\Api;
-
-use MingYuanYun\AppStore\Client;
+use Giginc\AppStore\Client;
 
 abstract class AbstractApi implements ApiInterface
 {

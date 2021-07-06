@@ -1,13 +1,13 @@
 <?php
 
 
-namespace MingYuanYun\AppStore;
+namespace Giginc\AppStore;
 
 
-use MingYuanYun\AppStore\Exceptions\ConfigException;
-use MingYuanYun\AppStore\Exceptions\InvalidArgumentException;
-use MingYuanYun\AppStore\Utils\HttpClient;
-use MingYuanYun\AppStore\Utils\JWT;
+use Giginc\AppStore\Exceptions\ConfigException;
+use Giginc\AppStore\Exceptions\InvalidArgumentException;
+use Giginc\AppStore\Utils\HttpClient;
+use Giginc\AppStore\Utils\JWT;
 
 class Client
 {

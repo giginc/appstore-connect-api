@@ -1,6 +1,6 @@
 <?php
 
-namespace MingYuanYun\AppStore\Api;
+namespace Giginc\AppStore\Api;
 
 
 class Certificates extends AbstractApi

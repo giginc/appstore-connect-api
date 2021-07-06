@@ -1,7 +1,7 @@
 <?php
 
 
-namespace MingYuanYun\AppStore\Api;
+namespace Giginc\AppStore\Api;
 
 
 class BundleIdCapability extends AbstractApi

@@ -1,7 +1,6 @@
 <?php
 
-
-namespace MingYuanYun\AppStore\Api;
+namespace Giginc\AppStore\Api;
 
 
 class Profiles extends AbstractApi

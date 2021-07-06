@@ -8,13 +8,13 @@
 ## install
 
 ```
-composer require yunchuang/appstore-connect-api
+composer require giginc/appstore-connect-api
 ```
 
 ## example
 ```php
 
-use MingYuanYun\AppStore\Client;
+use Giginc\AppStore\Client;
 
 $config = [
     'iss' => 'xx-xx-xx-xx-xxx',
