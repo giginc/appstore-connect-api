@@ -1,8 +1,5 @@
 <?php
-
-
 namespace Giginc\AppStore\Api;
-
 
 class Device extends AbstractApi
 {

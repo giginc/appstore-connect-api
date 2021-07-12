@@ -1,7 +1,5 @@
 <?php
-
 namespace Giginc\AppStore\Api;
-
 
 class Profiles extends AbstractApi
 {

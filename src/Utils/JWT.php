@@ -1,7 +1,5 @@
 <?php
-
 namespace Giginc\AppStore\Utils;
-
 
 use Giginc\AppStore\Exceptions\RuntimeException;
 
@@ -17,7 +15,7 @@ class JWT
     {
         $this->payload = json_encode($payload);
         $this->header = json_encode($header);
-        $this->secret = $secret;
+        $this->secret = openssl_pkey_get_private($secret);
     }
 
     public static function encode(array $payload, array $header, string $secret)
@@ -42,7 +40,7 @@ class JWT
     protected function sign($data)
     {
         if (!openssl_sign($data, $signature, $this->secret, OPENSSL_ALGO_SHA256)) {
-            throw new RuntimeException('openssl加密失败');
+            throw new RuntimeException('OpenSSL encryption failed');
         }
 
         return static::fromDER($signature, 64);

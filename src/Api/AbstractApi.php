@@ -1,5 +1,4 @@
 <?php
-
 namespace Giginc\AppStore\Api;
 
 use Giginc\AppStore\Client;

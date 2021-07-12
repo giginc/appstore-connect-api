@@ -1,8 +1,5 @@
 <?php
-
-
 namespace Giginc\AppStore;
-
 
 use Giginc\AppStore\Exceptions\ConfigException;
 use Giginc\AppStore\Exceptions\InvalidArgumentException;
@@ -91,7 +88,7 @@ class Client
 
     public function checkAuthHeader()
     {
-        if (!\array_key_exists('Authorization', $this->headers)) {
+        if (empty($this->headers) || !array_key_exists('Authorization', $this->headers)) {
             $jwtToken = $this->getToken();
             $this->headers['Authorization'] = 'Bearer ' . $jwtToken;
         }
@@ -145,6 +142,12 @@ class Client
     public function api($name)
     {
         switch ($name) {
+            case 'apps':
+                $api = new Api\Apps($this);
+                break;
+            case 'appInfo':
+                $api = new Api\AppInfo($this);
+                break;
             case 'device':
                 $api = new Api\Device($this);
                 break;
@@ -160,8 +163,14 @@ class Client
             case 'certificates':
                 $api = new Api\Certificates($this);
                 break;
+            case 'salesReports':
+                $api = new Api\SalesReports($this);
+                break;
+            case 'financeReports':
+                $api = new Api\FinanceReports($this);
+                break;
             default:
-                throw new InvalidArgumentException('未定义的接口');
+                throw new InvalidArgumentException('Not found api connection');
         }
 
         return $api;
