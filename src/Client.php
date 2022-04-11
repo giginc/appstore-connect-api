@@ -81,7 +81,7 @@ class Client
     public function getToken()
     {
         if (!$this->iss || !$this->kid || !$this->secret) {
-            throw new ConfigException('缺少必要的配置');
+            throw new ConfigException('Required settings are missing.');
         }
         return $this->generateJwt();
     }

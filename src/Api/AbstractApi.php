@@ -40,7 +40,7 @@ abstract class AbstractApi implements ApiInterface
         return $this;
     }
 
-    protected function get($path, array $parameters = [], array $requestHeaders = [])
+    protected function get($path, array $parameters = [], array $requestHeaders = [], bool $isResponseTsv = false)
     {
         if (null !== $this->page && !isset($parameters['page'])) {
             $parameters['page'] = $this->page;
@@ -55,7 +55,7 @@ abstract class AbstractApi implements ApiInterface
         $url = $this->client->buildBaseUrl() . $path;
         $this->mergeHeaders($requestHeaders);
 
-        return $this->client->get($url, $parameters, $this->client->getHeaders());
+        return $this->client->get($url, $parameters, $this->client->getHeaders(), $isResponseTsv);
     }
 
     protected function postJson($path, array $parameters = [], array $requestHeaders = [])
