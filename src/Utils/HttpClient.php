@@ -45,7 +45,7 @@ trait HttpClient
         if ($this->curl->getHttpStatusCode() == 200) {
             return $isResponseTsv ? $this->wrapTsvContent($this->curl->getResponse()) :$this->wrapContent($this->curl->getResponse());
         } else {
-            return $this->curl->getResponse();
+            return false;
         }
     }
 
